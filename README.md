@@ -35,14 +35,10 @@ wget -P YOUR_HOME_PATH/musicfm/data/ https://huggingface.co/minzwon/MusicFM/reso
 
 ### Get embeddings
 ```
-HOME_PATH = "/home/dev" # path where you cloned musicfm
-
 import os
-import sys
 import torch
 
-sys.path.append(HOME_PATH)
-from musicfm.model.musicfm_25hz import MusicFM25Hz
+from musicfm import MusicFM25Hz
 
 # dummy audio (30 seconds, 24kHz)
 wav = (torch.rand(4, 24000 * 30) - 0.5) * 2
